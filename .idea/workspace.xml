@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="815b58c3-4417-4e41-92de-291b2e1740f9" name="Changes" comment="final phase 1">
+    <list default="true" id="815b58c3-4417-4e41-92de-291b2e1740f9" name="Changes" comment="final phase 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TriviaTrek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TriviaTrek.java" afterDir="false" />
@@ -98,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713588405992</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="final phase 2">
+      <option name="closed" value="true" />
+      <created>1713589428822</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713589428822</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +125,7 @@
     <MESSAGE value="starting of project" />
     <MESSAGE value="starting of project1" />
     <MESSAGE value="final phase 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="final phase 1" />
+    <MESSAGE value="final phase 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="final phase 2" />
   </component>
 </project>

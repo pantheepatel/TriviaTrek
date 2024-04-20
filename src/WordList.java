@@ -1,11 +1,10 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 public class WordList {
+    static List<String> elements;
 
-    public static void step_3(User currentUser, List<String> elements) {
+    public static void step_3(User currentUser) {
         String fileName = TriviaTrek.fileName;
         String userName = currentUser.getUsername();
         int highScore = currentUser.getHighScore();
@@ -24,10 +23,9 @@ public class WordList {
         String fileNameCategory = categories[selectedCategory].toLowerCase() + ".txt";
         elements = readWordsFromFile(fileNameCategory, levels[selectedLevel]);
 
-//        int highScore = Integer.parseInt(elements.get(0));
         List<String> elementsToGuess = new ArrayList<>(elements.subList(1, elements.size()));
-        System.out.println(userName + " " + highScore);
-//        System.out.println(highScore + " " + elementsToGuess);
+        System.out.println("Username : " + userName +  " HighScore : " + highScore);
+
         int score = mainGame(elementsToGuess);
         System.out.println("Your score: " + score);
         if (score > highScore) {
@@ -57,7 +55,7 @@ public class WordList {
             try {
                 int choice = Integer.parseInt(input);
                 if (choice >= 1 && choice <= options.length) {
-                    return choice - 1;  // Adjust to 0-based index
+                    return choice - 1;
                 } else {
                     System.out.println("Invalid choice. Please enter a number between 1 and " + options.length);
                 }
@@ -73,12 +71,10 @@ public class WordList {
 
         try (BufferedReader reader = new BufferedReader(new FileReader("data/" + fileName))) {
             String line;
-//            wordList.add(reader.readLine());
-            while (!Objects.equals(line = reader.readLine(), "complete")) {
+            while (!Objects.equals(line = reader.readLine(), "co")) {
                 if (line.startsWith("Level- ")) {
                     String[] parts = line.split("Level- ");
                     String levelName = parts[1].trim();
-                    System.out.println(levelName);
                     if (Objects.equals(levelName, selectedLevel)) {
 //                        System.out.println("level matched");
                         wordList.add(reader.readLine());

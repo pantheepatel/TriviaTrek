@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.util.*;
 import java.io.*;
 import java.util.regex.*;
@@ -11,12 +10,11 @@ public class TriviaTrek {
     public static final String fileName = "data/users.txt";
     public static boolean loggedin = false;
     public static int choice = 0;
-    public static int highScore = 0;
-    static List<String> elements;
+//    static List<String> elements;
 
     public static void main(String[] args) {
 
-       loadUserDataFromFile(fileName);
+        loadUserDataFromFile(fileName);
 
         System.out.println("\nWelcome to TriviaTrek Game\n");
 
@@ -36,7 +34,10 @@ public class TriviaTrek {
             switch (choice) {
                 case 1 -> registerUser();
                 case 2 -> loginUser();
-                case 3 -> System.out.println("Thank you");
+                case 3 -> {
+                    System.out.println("Thank you");
+                    System.exit(0);
+                }
                 default -> System.out.println("Please choose accordingly");
             }
         }
@@ -52,7 +53,7 @@ public class TriviaTrek {
                 "5. Have fun!\n");
         System.out.println();
         WordList step3 = new WordList();
-        step3.step_3(currentUser, elements);
+        step3.step_3(currentUser);
     }
 
 
@@ -139,7 +140,6 @@ public class TriviaTrek {
                 if (user.getPassword().equals(password)) {
                     currentUser = user;
                     System.out.println("Login successful. Welcome, " + username + "!");
-//                    highScore = user.getHighScore(fileName);
                     loggedin = true;
                     return;
                 } else {

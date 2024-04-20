@@ -33,27 +33,6 @@ public class User {
         return highScore;
     }
 
-    public int getHighScore(String fileName) {
-        List<String> lines = new ArrayList<>();
-        boolean found = false;
-
-        // Read the file and update the high score for the specified user
-        try (Scanner scanner = new Scanner(new File(fileName))) {
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                String[] parts = line.split(":");
-                if (parts.length >= 3 && parts[0].equals(username)) {
-                    return Integer.parseInt(parts[2]);
-                }
-                lines.add(line);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            return 0;
-        }
-        return highScore;
-    }
-
     public boolean setHighScore(int highScore, String FileName) {
         this.highScore = highScore;
         return updateHighScore(FileName, this.username, this.highScore);
@@ -80,7 +59,7 @@ public class User {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] parts = line.split(":");
-                if (parts.length >= 3 && parts[0].equals(username)) {
+                if (parts[0].equals(username)) {
                     parts[2] = String.valueOf(newHighScore); // Update the high score
                     line = String.join(":", parts);
                     found = true;
