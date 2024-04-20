@@ -8,16 +8,16 @@ public class WordList {
     public static void step_3(User currentUser, List<String> elements) {
         String fileName = TriviaTrek.fileName;
         String userName = currentUser.getUsername();
-        int highScore = currentUser.getHighScore(fileName);
+        int highScore = currentUser.getHighScore();
 
         String[] levels = {"Easy", "Medium", "Hard"};
         String[] categories = {"Fruits", "Veggies", "Animals"};
 
 
         int selectedLevel = displayMenu("Select Level:", levels);
-        System.out.println("Selected Level: " + levels[selectedLevel]);
-
         int selectedCategory = displayMenu("Select Category:", categories);
+        System.out.println();
+        System.out.println("Selected Level: " + levels[selectedLevel]);
         System.out.println("Selected Category: " + categories[selectedCategory]);
 
 //        this will fetch data from the user choose category
@@ -32,7 +32,7 @@ public class WordList {
         System.out.println("Your score: " + score);
         if (score > highScore) {
             System.out.println("You made new high score🥳");
-            System.out.println("Past highScore was " + currentUser.getHighScore(fileName));
+            System.out.println("Past highScore was " + currentUser.getHighScore());
 //            writeHighScore(fileName, score, levels[selectedLevel]);
             if (currentUser.setHighScore(score, fileName)) {
                 System.out.println("HighScore updated");
@@ -42,7 +42,6 @@ public class WordList {
         }
     }
 
-    //    this method is to print initial instructions and displaying the level/category
     private static int displayMenu(String prompt, String[] options) {
 
         while (true) {

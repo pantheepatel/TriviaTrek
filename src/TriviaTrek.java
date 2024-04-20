@@ -16,7 +16,7 @@ public class TriviaTrek {
 
     public static void main(String[] args) {
 
-        List<User> userList = loadUserDataFromFile(fileName);
+       loadUserDataFromFile(fileName);
 
         System.out.println("\nWelcome to TriviaTrek Game\n");
 
@@ -49,7 +49,7 @@ public class TriviaTrek {
                 "2. Select category(Fruits, Veggies, Animals) and level(Easy, Medium, Hard)\n" +
                 "3. You will be given 3 chances to guess, and points will be given according to number of chances you take, if you fail to guess the word then game will end there.\n" +
                 "4. Guess remaining characters for generated word\n" +
-                "5. Have fun!\n" );
+                "5. Have fun!\n");
         System.out.println();
         WordList step3 = new WordList();
         step3.step_3(currentUser, elements);
@@ -67,7 +67,7 @@ public class TriviaTrek {
                 int highScore = Integer.parseInt(parts[2]);
 
                 // Create a new User object and add it to the list
-                User user = new User(username, password);
+                User user = new User(username, password, highScore);
                 users.add(user);
             }
             return users;
@@ -94,7 +94,7 @@ public class TriviaTrek {
         } while (!isValidPassword(password));
 
         // Create and add new user
-        User newUser = new User(username, password);
+        User newUser = new User(username, password, 0);
         users.add(newUser);
         boolean success = newUser.saveToFile(fileName);
         if (success) {
@@ -121,7 +121,7 @@ public class TriviaTrek {
     }
 
     private static void loginUser() {
-        sc.nextLine(); // Consume newline character
+        sc.nextLine();
         System.out.print("Enter username: ");
         String username = sc.nextLine();
         System.out.print("Enter your password: ");
@@ -139,7 +139,7 @@ public class TriviaTrek {
                 if (user.getPassword().equals(password)) {
                     currentUser = user;
                     System.out.println("Login successful. Welcome, " + username + "!");
-                    highScore = user.getHighScore(fileName);
+//                    highScore = user.getHighScore(fileName);
                     loggedin = true;
                     return;
                 } else {

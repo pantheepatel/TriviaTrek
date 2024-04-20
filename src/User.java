@@ -6,10 +6,10 @@ public class User {
     private String password;
     private int highScore;
 
-    public User(String username, String password) {
+    public User(String username, String password,int highScore) {
         this.username = username;
         this.password = password;
-        this.highScore = 0;
+        this.highScore = highScore;
     }
 
     // Getters and setters for username, password, and highScore
@@ -27,6 +27,10 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getHighScore(){
+        return highScore;
     }
 
     public int getHighScore(String fileName) {
