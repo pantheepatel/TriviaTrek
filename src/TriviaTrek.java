@@ -45,6 +45,12 @@ public class TriviaTrek {
 
     private static void step_2() {
         System.out.println("\nHere are some rules of this game\n");
+        System.out.println("1. First register or login yourself to save your scores.\n" +
+                "2. Select category(Fruits, Veggies, Animals) and level(Easy, Medium, Hard)\n" +
+                "3. You will be given 3 chances to guess, and points will be given according to number of chances you take, if you fail to guess the word then game will end there.\n" +
+                "4. Guess remaining characters for generated word\n" +
+                "5. Have fun!\n" );
+        System.out.println();
         WordList step3 = new WordList();
         step3.step_3(currentUser, elements);
     }
@@ -72,10 +78,9 @@ public class TriviaTrek {
     }
 
     private static void registerUser() {
-        sc.nextLine(); // Consume newline character
+        sc.nextLine();
         System.out.print("Enter a username: ");
         String username = sc.nextLine();
-        // Check if username is already taken
         for (User user : users) {
             if (user.getUsername().equals(username)) {
                 System.out.println("Username already exists. Please choose a different one.");
@@ -120,8 +125,8 @@ public class TriviaTrek {
         System.out.print("Enter username: ");
         String username = sc.nextLine();
         System.out.print("Enter your password: ");
-//        String password = sc.nextLine();
-        String password = Arrays.toString(System.console().readPassword());
+        String password = sc.nextLine();
+//        String password = Arrays.toString(System.console().readPassword());
 //        String password = Arrays.toString(System.console().readPassword("[%s]","Password : "));
         loginUser(username, password);
     }
