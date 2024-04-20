@@ -1,0 +1,35 @@
+Level- Easy
+Carrot
+Tomato
+Onion
+Pepper
+Lettuce
+Cucumber
+Potato
+Spinach
+Broccoli
+Cabbage
+
+Level- Medium
+Eggplant
+Zucchini
+Radish
+Pumpkin
+Cauliflower
+Artichoke
+Asparagus
+Beetroot
+Celery
+Bellpepper
+
+Level- Hard
+Bokchoy
+Brusselsprouts
+Kale
+Leek
+Okra
+Turnip
+Radish
+Squash
+Rhubarb
+Watercress

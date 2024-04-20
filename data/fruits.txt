@@ -1,0 +1,35 @@
+Level- Easy
+Apple
+Banana
+Orange
+Grapes
+Strawberry
+Watermelon
+Kiwi
+Pear
+Peach
+Cherry
+
+Level- Medium
+Pineapple
+Mango
+Papaya
+Plum
+Apricot
+Coconut
+Blueberry
+Fig
+Lemon
+Avocado
+
+Level- Hard
+Durian
+Guava
+Lychee
+Passionfruit
+Persimmon
+Raspberry
+Dragonfruit
+Cantaloupe
+Starfruit
+Kumquat

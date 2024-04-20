@@ -1,0 +1,35 @@
+Level- Easy
+Dog
+Cat
+Bird
+Fish
+Mouse
+Rabbit
+Hamster
+Turtle
+Horse
+Pig
+
+Level- Medium
+Elephant
+Giraffe
+Lion
+Tiger
+Monkey
+Kangaroo
+Zebra
+Penguin
+Dolphin
+Gorilla
+
+Level- Hard
+Crocodile
+Hippopotamus
+Rhino
+Polarbear
+Panda
+Giraffe
+Koala
+Squirrel
+Armadillo
+Chimpanzee
